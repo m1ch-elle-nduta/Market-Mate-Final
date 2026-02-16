@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Mate - Inventory</title>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="inventory">
+
+
+<!-- Site header with logo and navigation -->
+<header class="header">
+    <h1 class="logo">Market Mate</h1>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="./index.html">Dashboard</a></li>
+            <li><a href="./add-stock.html">Add Stock</a></li>
+            <li><a href="./sales.html">Sales</a></li>
+            <li><a href="./inventory.html">Inventory</a></li>
+            <li><a href="./about.html">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="inventory-section">
+        <h2>Inventory</h2>
+        <p>All items and their sold quantities.</p>
+
+        <!-- Scrollable container for the inventory table -->
+        <div id="inventory-table-container">
+            <table id="inventory-table">
+
+                <!-- Table headers -->
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Item</th>
+                        <th>Qty Sold (kg)</th>
+                        <th>Remaining Stock (kg)</th>
+                        <th>Sell Price (KSh/kg)</th>
+                    </tr>
+                </thead>
+
+                <!-- Rows are dynamically inserted by inventory.js -->
+                <tbody>
+                </tbody>
+
+            </table>
+        </div>
+
+    </section>
+</main>
+
+<!-- Site footer -->
+<footer>
+    <p>(c) 2026 Market Mate - Helping mama mboga</p>
+</footer>
+
+<!-- store to get an inventory -->
+<script src="./storage.js"></script>
+<script src="./inventory.js"></script>
+
+
+</body>
+
+</html>

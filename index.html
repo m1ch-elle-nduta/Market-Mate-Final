@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Mate - Dashboard</title>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- Site header with logo and navigation -->
+<header class="header">
+    <h1 class="logo">Market Mate</h1>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="./index.html">Dashboard</a></li>
+            <li><a href="./add-stock.html">Add Stock</a></li>
+            <li><a href="./sales.html">Sales</a></li>
+            <li><a href="./inventory.html">Inventory</a></li>
+            <li><a href="./about.html">About</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <!-- Dashboard summary section -->
+    <section class="dashboard">
+        <h2>Dashboard</h2>
+        <p>Welcome! Track your stock here.</p>
+
+        <!-- Cards showing stock summary -->
+        <div class="summary-cards">
+
+            <!-- Total number of items updated by dashboard.js -->
+            <div class="card">
+                <h3>Total Items</h3>
+                <p id="total-items">0</p>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<!-- Site footer -->
+<footer>
+    <p>(c) 2026 Market Mate - Helping mama mboga</p>
+</footer>
+
+<!-- storage.js must load first so that getVegetables() is available to dashboard.js -->
+<script src="./storage.js"></script>
+<script src="./dashboard.js"></script>
+
+
+</body>
+
+</html>

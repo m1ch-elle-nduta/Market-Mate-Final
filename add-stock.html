@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Mate - Add Stock</title>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="stock">
+
+
+<!-- Site header with logo and navigation -->
+<header class="header">
+    <h1 class="logo">Market Mate</h1>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="./index.html">Dashboard</a></li>
+            <li><a href="./add-stock.html">Add Stock</a></li>
+            <li><a href="./sales.html">Sales</a></li>
+            <li><a href="./inventory.html">Inventory</a></li>
+            <li><a href="./about.html">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- Form for adding a new vegetable to stock -->
+    <section class="form-container">
+        <h2>Add New Item to Stock</h2>
+        <form id="add-form">
+
+            <!-- Item name field -->
+            <div class="form-row">
+                <label for="name">Item Name:</label>
+                <input type="text" id="name" required placeholder="e.g. Tomatoes">
+            </div>
+
+            <!-- How many kg are being added -->
+            <div class="form-row">
+                <label for="stock">Stock Quantity (kg):</label>
+                <input type="number" id="stock" min="0" step="0.1" required placeholder="10">
+            </div>
+
+            <!-- Price paid per kg when buying from supplier -->
+            <div class="form-row">
+                <label for="buy">Buy Price (KSh per kg):</label>
+                <input type="number" id="buy" min="0" step="0.01" required placeholder="20">
+            </div>
+
+            <!-- Price charged per kg when selling to customers -->
+            <div class="form-row">
+                <label for="sell">Sell Price (KSh per kg):</label>
+                <input type="number" id="sell" min="0" step="0.01" required placeholder="35">
+            </div>
+
+            <button type="submit">Add Item</button>
+        </form>
+
+        <!-- Success or error message shown after form submission -->
+        <p id="add-msg" class="message"></p>
+    </section>
+</main>
+
+<!-- Site footer -->
+<footer>
+    <p>(c) 2026 Market Mate - Helping mama mboga</p>
+</footer>
+
+<!-- storage.js must load first so that getVegetables() is available to add-stock.js -->
+<script src="./storage.js"></script>
+<script src="./add-stock.js"></script>
+
+
+</body>
+
+</html>
